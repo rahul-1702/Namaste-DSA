@@ -13,6 +13,24 @@ function bestTimeBuySellStock(price) {
   return diff;
 }
 
-const arr = [7, 1, 5, 8, 6, 4];
+function optimiseSolution(price){
+    let diff = 0;
+    let min = price[0];
+    for(let i = 1; i < price.length; i++){
+        if(price[i] - min > diff){
+            diff = price[i] - min;
+        }
 
-console.log(bestTimeBuySellStock(arr));
+        if(price[i] < min){
+            min = price[i];
+        }
+    }
+
+    return diff;
+}
+
+
+// const arr = [7, 6, 4, 3, 1];
+const arr = [7, 1, 5, 3, 6, 4];
+
+console.log(optimiseSolution(arr));
