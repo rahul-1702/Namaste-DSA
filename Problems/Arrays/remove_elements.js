@@ -10,7 +10,7 @@ function removeElements(nums, k) {
   return nums;
 }
 
-const arr = [6, 8, 2, 0, 4, 2, 2, 2, 8, 2, 2, 2, 2, 2, 2, 4];
+const arr = [6, 8, 4, 2, 2, 2, 8, 2, 2, 2, 2, 2, 2, 4];
 const element = 2;
 
 console.log(removeElements(arr, element));
