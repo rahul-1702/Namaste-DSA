@@ -16,6 +16,7 @@ function bestTimeBuySellStock(price) {
 function optimiseSolution(price){
     let diff = 0;
     let min = price[0];
+    
     for(let i = 1; i < price.length; i++){
         if(price[i] - min > diff){
             diff = price[i] - min;
@@ -30,7 +31,8 @@ function optimiseSolution(price){
 }
 
 
-// const arr = [7, 6, 4, 3, 1];
 const arr = [7, 1, 5, 3, 6, 4];
+// output: 5
 
+console.log(bestTimeBuySellStock(arr));
 console.log(optimiseSolution(arr));

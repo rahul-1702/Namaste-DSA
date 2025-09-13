@@ -1,3 +1,4 @@
+// Code to Merge Sorted Arrays
 
 function mergeSortedArrays(n1, n2){
     let x = -1;
@@ -18,8 +19,7 @@ function optimizeSolution(n1, m, n2, n){
 
     let p1 = 0;
     let p2 = 0;
-    for(let i = 0; i < m+n; i++){
-       
+    for(let i = 0; i < m+n; i++){       
         if(p2 >= n || (p1 < m && n1Copy[p1] < n2[p2])){
             n1[i] = n1Copy[p1];
             p1++;
@@ -27,9 +27,7 @@ function optimizeSolution(n1, m, n2, n){
             n1[i] = n2[p2];
             p2++;
         }
-        
     }
-
     return n1;
 }
 
