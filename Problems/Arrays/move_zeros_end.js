@@ -18,7 +18,7 @@
 //   return temp;
 // }
 
-function secondOptimizedSolution(arr){
+function optimizedSolution(arr){
     let k = 0;
     for(let i = 1; i < arr.length; i++){
         if(arr[i] !== 0){
@@ -37,4 +37,4 @@ function secondOptimizedSolution(arr){
 const nums = [0, 1, 0, 3, 12, 0, 0, 22];
 
 // console.log(moveZerosEnd(nums));
-console.log(secondOptimizedSolution(nums));
+console.log(optimizedSolution(nums));
