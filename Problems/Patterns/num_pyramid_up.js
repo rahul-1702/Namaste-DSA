@@ -8,19 +8,19 @@
 
 */
 
-
 function Pattern(n) {
-    for(let i = 1; i <= n; i++){
-        let row = " ";
-        for(let j = 1; j <= i*2; j++){
-            if(j < n-i){
-                row = row + "  ";
-            }else{
-                row = row + i + " ";
-            }
+  for (let i = 1; i <= n; i++) {
+    let row = " ";
+    let k = n - i;
+    for (let j = 1; j <= i * 2; j++) {
+        if(j === 1){
+            row = row + "  ".repeat(k);
+        }else{
+            row = row + i + " ";
         }
-        console.log(row);
     }
+    console.log(row);
+  }
 }
 
 Pattern(5);
