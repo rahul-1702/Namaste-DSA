@@ -34,7 +34,18 @@ function optimizedSolution(arr) {
   return +Object.keys(temp).filter((x) => temp[x] === 1)[0];
 }
 
-const nums = [2, 2, 4, 5, 5, 1, 5, 1];
+function secondOptimized(arr){
+    let xor = 0;
+
+    for(let i = 0; i < arr.length; i++){
+        xor = xor ^ arr[i];
+    }
+
+    return xor;
+}
+
+const nums = [4, 1, 6, 1, 8, 6, 2, 4, 2];
 
 console.log(singleNumber(nums));
 console.log(optimizedSolution(nums));
+console.log(secondOptimized(nums));
