@@ -40,11 +40,15 @@ function FactorialNumber(n) {
 
 // -----------------------------------------
 SimpleCounting(num);
+
 console.log("=".repeat(10));
 ReverseCounting1(1);
+
 console.log("=".repeat(10));
 ReverseCounting2(5);
+
 console.log("=".repeat(10));
 console.log("SumOfNumbers : ", SumOfNumbers(5));
+
 console.log("=".repeat(10));
 console.log("FactorialNumber : ", FactorialNumber(5));
