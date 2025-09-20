@@ -13,15 +13,12 @@
 // }
 
 function sumOfAllOddNumbers2(n) {
+  let isOdd = marks[n] % 2 === 1;
   if (n === 0) {
-    return 0;
+    return isOdd ? marks[n] : 0;
   }
 
-  if (marks[n] % 2 === 1) {
-    return marks[n] + sumOfAllOddNumbers2(n - 1);
-  } else {
-    return 0 + sumOfAllOddNumbers2(n - 1);
-  }
+  return (isOdd ? marks[n] : 0) + sumOfAllOddNumbers2(n - 1);
 }
 
 let marks = [2, 7, 3, 9, 6, 8, 5, 4];
