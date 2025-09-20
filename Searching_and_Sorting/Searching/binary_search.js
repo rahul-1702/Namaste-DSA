@@ -34,8 +34,8 @@ function binarySearchLoop(arr, target, start, end) {
 //   }
 // }
 
-let nums = [2, 4, 5, 7, 8, 9];
-let target = 2;
+let nums =  [2, 4, 5, 7, 8, 9];
+let target = 7;
 
 let start = 0;
 let end = nums.length - 1;
