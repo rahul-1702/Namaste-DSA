@@ -1,3 +1,5 @@
+// num = 32 => true
+
 function isPowerOfTwo(n) {
   if (n === 1 || n === 0) {
     return true;

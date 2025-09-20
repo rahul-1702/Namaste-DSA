@@ -1,4 +1,4 @@
-// num = 5 = 120
+// num = 5 => 120
 
 function findFactorial(num) {
   if (num === 1) {
