@@ -1,5 +1,5 @@
 function isPowerOfTwo(n) {
-  if (n === 2) {
+  if (n === 1 || n === 0) {
     return true;
   }
 
