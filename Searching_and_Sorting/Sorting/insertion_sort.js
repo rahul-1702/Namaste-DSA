@@ -1,5 +1,6 @@
 // nums = [5, 2, 4, 1, 3]
 // output = [1, 2, 3, 4, 5]
+// Think while Inserting, Select any
 
 function selectionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
