@@ -16,16 +16,18 @@ function merge(n1, n2) {
     }
   }
 
-  while (p1 < n1.length) {
-    res.push(n1[p1]);
-    p1++;
-  }
+  return [...res, ...n1.slice(p1), ...n2.slice(p2)];
 
-  while (p2 < n2.length) {
-    res.push(n2[p2]);
-    p2++;
-  }
-  return res;
+  // while (p1 < n1.length) {
+  //   res.push(n1[p1]);
+  //   p1++;
+  // }
+
+  // while (p2 < n2.length) {
+  //   res.push(n2[p2]);
+  //   p2++;
+  // }
+  // return res;
 }
 
 function mergeSort(arr) {
