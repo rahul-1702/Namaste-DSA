@@ -1,8 +1,21 @@
 // Update one Node in Linked List
 
-const node1 = {
-    data: 12,
-    next: null
-};
+function LinkedList() {
+  let val;
+  let next;
 
-console.log(node1)
+  this.newNode = function (val) {
+    this.val = val;
+    this.next = null;
+  };
+
+  this.MyLinkedList = function (head) {
+    let curr = head;
+    while (curr.next !== null) {
+      console.log(curr.val);
+      curr = curr.next;
+    }
+  };
+
+  this.addNodeAtStart = function (val, head) {};
+}
