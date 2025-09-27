@@ -11,6 +11,19 @@ var MyLinkedList = function () {
 };
 
 /**
+ * @return {String}
+ */
+MyLinkedList.prototype.display = function () {
+  let list = "";
+  let curr = this.head;
+  while (curr !== null) {
+    list = list + "|" + curr.val + "| --> ";
+    curr = curr.next;
+  }
+  list = list + "null";
+  return list;
+};
+/**
  * @param {number} index
  * @return {number}
  */
@@ -122,3 +135,5 @@ obj.addAtIndex(2, 5);
 obj.deleteAtIndex(5);
 console.log("obj.get(2) => ", obj.get(2));
 console.log("obj.get(2) => ", obj.get(0));
+
+console.log(obj.display());

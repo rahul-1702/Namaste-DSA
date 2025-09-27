@@ -11,6 +11,19 @@ var MyLinkedList = function () {
 };
 
 /**
+ * @return {String}
+ */
+MyLinkedList.prototype.display = function () {
+  let list = "";
+  let curr = this.head;
+  while (curr !== null) {
+    list = list + "|" + curr.val + "| --> ";
+    curr = curr.next;
+  }
+  list = list + "null";
+  return list;
+};
+/**
  * @param {number} index
  * @return {number}
  */
@@ -113,7 +126,7 @@ MyLinkedList.prototype.middleElement = function () {
     fast = fast.next.next;
   }
 
-  return slow;
+  return slow.val;
 };
 
 /**
@@ -134,5 +147,5 @@ obj.addAtTail(4);
 obj.addAtTail(5);
 obj.addAtTail(6);
 
-console.log("obj : ", obj);
 console.log("middleElement : ", obj.middleElement());
+console.log(obj.display());
