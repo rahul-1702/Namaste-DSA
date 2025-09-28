@@ -162,6 +162,23 @@ MyLinkedList.prototype.isAnyCycle = function () {
 };
 
 /**
+ * @return {boolean}
+ */
+MyLinkedList.prototype.isAnyCycleOptimized = function () {
+  if (this.head === null) return false;
+  let slow = this.head;
+  let fast = this.head.next;
+  while (fast !== null && fast.next !== null) {
+    if (slow === fast) {
+      return true;
+    }
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return false;
+};
+
+/**
  * Your MyLinkedList object will be instantiated and called as such:
  * var obj = new MyLinkedList()
  * var param_1 = obj.get(index)
@@ -180,4 +197,4 @@ obj.addAtTail(5);
 obj.addAtTail(6);
 
 console.log(obj.display());
-console.log("Is any cycle :", obj.isAnyCycle());
+console.log("Is any cycle :", obj.isAnyCycleOptimized());
