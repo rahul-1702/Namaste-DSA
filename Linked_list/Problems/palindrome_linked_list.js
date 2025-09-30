@@ -171,7 +171,6 @@ MyLinkedList.prototype.checkPalindrome = function () {
     if (prev.val !== h.val) return false;
     prev = prev.next;
     h = h.next;
-    length--;
   }
 
   return true;
