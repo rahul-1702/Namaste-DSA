@@ -167,7 +167,7 @@ MyLinkedList.prototype.checkPalindrome = function () {
     curr = temp;
   }
 
-  while (length > 0 && prev && h) {
+  while (prev) {
     if (prev.val !== h.val) return false;
     prev = prev.next;
     h = h.next;
