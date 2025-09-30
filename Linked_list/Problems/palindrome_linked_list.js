@@ -38,6 +38,7 @@ MyLinkedList.prototype.display = function () {
   list = list + "null";
   return list;
 };
+
 /**
  * @param {number} index
  * @return {number}
@@ -83,6 +84,7 @@ MyLinkedList.prototype.addAtTail = function (val) {
   }
   this.size++;
 };
+
 /**
  * @param {number} index
  * @param {number} val
