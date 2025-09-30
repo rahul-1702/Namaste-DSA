@@ -188,10 +188,10 @@ MyLinkedList.prototype.checkPalindrome = function () {
  */
 
 var obj = new MyLinkedList();
-obj.addAtHead(8);
-obj.addAtTail(1);
+obj.addAtHead(1);
 obj.addAtTail(2);
-obj.addAtTail(8);
+obj.addAtTail(2);
+obj.addAtTail(1);
 
 console.log("Is Palindrome : ", obj.checkPalindrome());
 console.log(obj.display());
