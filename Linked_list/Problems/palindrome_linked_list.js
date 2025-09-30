@@ -191,9 +191,6 @@ var obj = new MyLinkedList();
 obj.addAtHead(8);
 obj.addAtTail(1);
 obj.addAtTail(2);
-obj.addAtTail(3);
-obj.addAtTail(2);
-obj.addAtTail(1);
 obj.addAtTail(8);
 
 console.log("Is Palindrome : ", obj.checkPalindrome());
