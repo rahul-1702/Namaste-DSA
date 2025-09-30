@@ -1,0 +1,1 @@
+// program for check palindrome of linked list

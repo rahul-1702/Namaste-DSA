@@ -161,7 +161,6 @@ MyLinkedList.prototype.isAnyCycle = function () {
   return false;
 };
 
-
 /**
  * @return {boolean}
  */
