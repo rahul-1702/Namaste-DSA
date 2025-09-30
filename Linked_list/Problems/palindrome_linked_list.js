@@ -196,6 +196,5 @@ obj.addAtTail(2);
 obj.addAtTail(1);
 obj.addAtTail(8);
 
-console.log("Total Nodes : ", obj.totalNodes());
 console.log("Is Palindrome : ", obj.checkPalindrome());
 console.log(obj.display());
