@@ -190,6 +190,6 @@ obj.addAtTail(6);
 obj.addAtTail(6);
 
 console.log("Before :", obj.display());
-// obj.removeElement(6);
-obj.removeElementOptimized(6);
+obj.removeElement(6);
+// obj.removeElementOptimized(6);
 console.log("After :", obj.display());
