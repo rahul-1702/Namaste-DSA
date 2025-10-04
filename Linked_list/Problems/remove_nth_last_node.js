@@ -135,7 +135,7 @@ MyLinkedList.prototype.middleElement = function () {
  * @param {Number} n
  * @return {Void}
  */
-MyLinkedList.prototype.removeNthLastNode = function (n) {
+MyLinkedList.prototype.removeNthLastNode = function (n) { // Two Pass Approach
   if (n <= 0) return;
 
   let length = 0;
@@ -165,7 +165,7 @@ MyLinkedList.prototype.removeNthLastNode = function (n) {
  * @param {Number} n
  * @return {Void}
  */
-MyLinkedList.prototype.removeNthLastNodeOptimized = function (n) {
+MyLinkedList.prototype.removeNthLastNodeOptimized = function (n) { // One Pass Approach
   if (n <= 0) return;
 
   let sentinal = new Node();
