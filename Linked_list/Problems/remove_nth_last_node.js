@@ -179,7 +179,7 @@ MyLinkedList.prototype.removeNthLastNodeOptimized = function (n) {
     n--;
   }
 
-  while (fast && fast.next) {
+  while (fast.next) {
     slow = slow.next;
     fast = fast.next;
   }
