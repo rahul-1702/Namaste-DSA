@@ -137,6 +137,7 @@ MyLinkedList.prototype.middleElement = function () {
  */
 
 MyLinkedList.prototype.getNthLastNode = function (n) {
+  if (n <= 0) return -1;
   let length = 0;
   let curr = this.head;
   while (curr) {
@@ -145,6 +146,7 @@ MyLinkedList.prototype.getNthLastNode = function (n) {
   }
 
   let count = length - n;
+  if (count < 0) return -1;
   let temp = this.head;
   while (count > 0) {
     temp = temp.next;
@@ -172,5 +174,5 @@ obj.addAtTail(12);
 obj.addAtTail(15);
 obj.addAtTail(18);
 
-console.log("getNthLastNode : ", obj.getNthLastNode(4));
+console.log("getNthLastNode : ", obj.getNthLastNode(1));
 console.log("obj :", obj.display());
