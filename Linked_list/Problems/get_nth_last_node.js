@@ -174,5 +174,5 @@ obj.addAtTail(12);
 obj.addAtTail(15);
 obj.addAtTail(18);
 
-console.log("getNthLastNode : ", obj.getNthLastNode(1));
+console.log("getNthLastNode : ", obj.getNthLastNode(1)); // Two pass approach
 console.log("obj :", obj.display());

@@ -178,5 +178,5 @@ obj.addAtTail(12);
 obj.addAtTail(15);
 obj.addAtTail(18);
 
-obj.removeNthLastNode(9);
+obj.removeNthLastNode(9); // Two pass approach
 console.log("obj :", obj.display());
