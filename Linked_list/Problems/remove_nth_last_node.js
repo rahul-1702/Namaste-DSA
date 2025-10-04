@@ -137,21 +137,27 @@ MyLinkedList.prototype.middleElement = function () {
  */
 
 MyLinkedList.prototype.removeNthLastNode = function (n) {
+  if (n <= 0) return;
   let length = 0;
   let curr = this.head;
+  let sentinal = new Node();
+  sentinal.next = this.head;
+
   while (curr) {
     curr = curr.next;
     length++;
   }
 
   let count = length - n;
-  let temp = this.head;
-  while (count > 1) {
+  if (count < 0) return;
+  let temp = sentinal;
+  while (count > 0) {
     temp = temp.next;
     count--;
   }
 
   temp.next = temp.next.next;
+  this.head = sentinal.next;
 };
 
 /**
@@ -172,5 +178,5 @@ obj.addAtTail(12);
 obj.addAtTail(15);
 obj.addAtTail(18);
 
-obj.removeNthLastNode(4);
+obj.removeNthLastNode(9);
 console.log("obj :", obj.display());
