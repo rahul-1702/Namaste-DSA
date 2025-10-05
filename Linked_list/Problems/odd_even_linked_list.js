@@ -135,7 +135,7 @@ MyLinkedList.prototype.middleElement = function () {
  * @return {Void}
  */
 MyLinkedList.prototype.oddEvenLinkedList = function () {
-  if (!this.head) return null;
+  if (!this.head || !this.head.next) return;
 
   let odd = this.head;
   let even = (end = this.head.next);
@@ -164,12 +164,12 @@ let obj = new MyLinkedList();
 obj.addAtHead(1);
 obj.addAtTail(2);
 obj.addAtTail(3);
-obj.addAtTail(4);
-obj.addAtTail(5);
-obj.addAtTail(6);
-obj.addAtTail(7);
-obj.addAtTail(8);
-obj.addAtTail(9);
+// obj.addAtTail(4);
+// obj.addAtTail(5);
+// obj.addAtTail(6);
+// obj.addAtTail(7);
+// obj.addAtTail(8);
+// obj.addAtTail(9);
 
 console.log("Before :", obj.display());
 obj.oddEvenLinkedList();
