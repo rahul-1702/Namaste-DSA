@@ -132,11 +132,18 @@ MyLinkedList.prototype.middleElement = function () {
 // ========================================================
 
 /**
- * @param {Number} n
  * @return {Void}
  */
-MyLinkedList.prototype.removeDuplicates = function (n) {
-  
+MyLinkedList.prototype.removeDuplicates = function () {
+  let curr = this.head;
+
+  while (curr && curr.next) {
+    if (curr.val === curr.next.val) {
+      curr.next = curr.next.next;
+    } else {
+      curr = curr.next;
+    }
+  }
 };
 
 /**
@@ -151,11 +158,14 @@ MyLinkedList.prototype.removeDuplicates = function (n) {
 
 let obj = new MyLinkedList();
 obj.addAtHead(3);
+obj.addAtHead(3);
+obj.addAtHead(3);
 obj.addAtTail(6);
 obj.addAtTail(6);
 obj.addAtTail(12);
 obj.addAtTail(15);
 obj.addAtTail(15);
+obj.addAtTail(18);
 obj.addAtTail(18);
 
 console.log("Before :", obj.display());
