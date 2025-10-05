@@ -135,57 +135,8 @@ MyLinkedList.prototype.middleElement = function () {
  * @param {Number} n
  * @return {Void}
  */
-MyLinkedList.prototype.removeNthLastNode = function (n) { // Two Pass Approach
-  if (n <= 0) return;
-
-  let length = 0;
-  let curr = this.head;
-  let sentinal = new Node();
-  sentinal.next = this.head;
-
-  while (curr) {
-    curr = curr.next;
-    length++;
-  }
-
-  let count = length - n;
-  if (count < 0) return;
-
-  let temp = sentinal;
-  while (count > 0) {
-    temp = temp.next;
-    count--;
-  }
-
-  temp.next = temp.next.next;
-  this.head = sentinal.next;
-};
-
-/**
- * @param {Number} n
- * @return {Void}
- */
-MyLinkedList.prototype.removeNthLastNodeOptimized = function (n) { // One Pass Approach
-  if (n <= 0) return;
-
-  let sentinal = new Node();
-  sentinal.next = this.head;
-
-  let slow = (fast = sentinal);
-  while (n > 0) {
-    if (!fast.next) return;
-
-    fast = fast.next;
-    n--;
-  }
-
-  while (fast.next) {
-    slow = slow.next;
-    fast = fast.next;
-  }
-
-  slow.next = slow.next.next;
-  this.head = sentinal.next;
+MyLinkedList.prototype.removeDuplicates = function (n) {
+  
 };
 
 /**
@@ -201,12 +152,12 @@ MyLinkedList.prototype.removeNthLastNodeOptimized = function (n) { // One Pass A
 let obj = new MyLinkedList();
 obj.addAtHead(3);
 obj.addAtTail(6);
-obj.addAtTail(9);
+obj.addAtTail(6);
 obj.addAtTail(12);
+obj.addAtTail(15);
 obj.addAtTail(15);
 obj.addAtTail(18);
 
 console.log("Before :", obj.display());
-// obj.removeNthLastNode(9); // Two pass approach
-obj.removeNthLastNodeOptimized(2); // One pass approach
+obj.removeDuplicates();
 console.log("After :", obj.display());
