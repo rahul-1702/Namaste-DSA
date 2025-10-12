@@ -132,10 +132,40 @@ MyLinkedList.prototype.middleElement = function () {
 // ========================================================
 
 /**
+ * @param {Number} k
  * @return {Void}
  */
-MyLinkedList.prototype.rotateLinkedList = function () {
-  
+MyLinkedList.prototype.rotateLinkedList = function (k) {
+  let curr = this.head;
+  if (!curr || !curr.next || k === 0) return curr;
+
+  // Step 1: Find length and tail
+  let length = 1;
+  let tail = curr;
+  while (tail.next) {
+    tail = tail.next;
+    length++;
+  }
+
+  // Step 2: Make it circular
+  tail.next = curr;
+
+  // Step 3: Find new tail position
+  k = k % length; // handle k > length
+  let stepsToNewTail = length - k - 1;
+  let newTail = curr;
+
+  while (stepsToNewTail > 0) {
+    newTail = newTail.next;
+    stepsToNewTail--;
+  }
+
+  // Step 4: New head = newTail.next
+  const newHead = newTail.next;
+
+  newTail.next = null;
+
+  this.head = newHead;
 };
 
 /**
@@ -157,5 +187,5 @@ obj.addAtTail(15);
 obj.addAtTail(18);
 
 console.log("Before :", obj.display());
-obj.rotateLinkedList();
+obj.rotateLinkedList(2);
 console.log("After :", obj.display());
