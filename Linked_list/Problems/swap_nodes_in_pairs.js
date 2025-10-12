@@ -164,9 +164,25 @@ MyLinkedList.prototype.swapNodesPairsIterative = function () {
 /**
  * @return {Void}
  */
-MyLinkedList.prototype.swapNodesPairs = function () {
+function swapNodesPairsRecursive(head) {
   // Recursive Approach
-};
+
+  // Base case: 0 or 1 node left
+  if (!head || !head.next) return head;
+
+  // Identify nodes to swap
+  let first = head;
+  let second = head.next;
+
+  // Recursively swap the rest
+  first.next = swapNodesPairsRecursive(second.next);
+
+  // Perform current swap
+  second.next = first;
+
+  // New head is the second node
+  return second;
+}
 
 /**
  * Your MyLinkedList object will be instantiated and called as such:
