@@ -134,8 +134,31 @@ MyLinkedList.prototype.middleElement = function () {
 /**
  * @return {Void}
  */
-MyLinkedList.prototype.swapNodesPairs = function () {
+MyLinkedList.prototype.swapNodesPairsIterative = function () {
   // Iterative Approach
+
+  let curr = this.head;
+  // Dummy node to simplify edge cases
+  const dummy = new Node(0);
+  dummy.next = curr;
+  let prev = dummy;
+
+  while (prev.next && prev.next.next) {
+    // Identify the two nodes to swap
+    let first = prev.next;
+    let second = first.next;
+
+    // Swapping process
+    first.next = second.next;
+    second.next = first;
+    prev.next = second;
+
+    // Move prev pointer two nodes ahead
+    prev = first;
+  }
+
+  // Return new head (dummy.next)
+  this.head = dummy.next;
 };
 
 /**
@@ -162,7 +185,8 @@ obj.addAtTail(9);
 obj.addAtTail(12);
 obj.addAtTail(15);
 obj.addAtTail(18);
+obj.addAtTail(21);
 
 console.log("Before :", obj.display());
-obj.swapNodesPairs();
+obj.swapNodesPairsIterative();
 console.log("After :", obj.display());
