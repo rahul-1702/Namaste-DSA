@@ -24,5 +24,5 @@ function lengthOfLastWordOptimized(str) {
 }
 
 let str = " Welcome to my world ";
-console.log(lengthOfLastWord(str));
-console.log(lengthOfLastWordOptimized(str));
+console.log("Using two loops :", lengthOfLastWord(str));
+console.log("Using one loop :", lengthOfLastWordOptimized(str));
