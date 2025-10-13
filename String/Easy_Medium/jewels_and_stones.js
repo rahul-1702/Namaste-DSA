@@ -2,9 +2,12 @@
 
 function JewelsAndStones(jew, stn) {
   let count = 0;
-  for (let i = 0; i < jew.length; i++) {
-    for (let j = 0; j < stn.length; j++) {
-      if (jew[i] === stn[j]) count++;
+  for (let i = 0; i < stn.length; i++) {
+    for (let j = 0; j < jew.length; j++) {
+      if (stn[i] === jew[j]) {
+        count++;
+        break;
+      }
     }
   }
 
@@ -20,8 +23,8 @@ function JewelsAndStonesOptimized(jew, stn) {
   return count;
 }
 
-let jewels = "aA";
-let stones = "aAAbbbb";
+let jewels = "aAaaC";
+let stones = "aAAbbCbb";
 
 console.log(JewelsAndStones(jewels, stones));
 console.log(JewelsAndStonesOptimized(jewels, stones));
