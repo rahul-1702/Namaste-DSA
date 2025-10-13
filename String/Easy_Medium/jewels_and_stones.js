@@ -23,8 +23,23 @@ function JewelsAndStonesOptimized(jew, stn) {
   return count;
 }
 
-let jewels = "aAaaC";
-let stones = "aAAbbCbb";
+function JewelsAndStonesOptimized2(jew, stn) {
+  let count = 0;
+  let jSet = new Set();
+  for (let i = 0; i < jew.length; i++) {
+    jSet.add(jew[i]);
+  }
+
+  for (let i = 0; i < stn.length; i++) {
+    if (jSet.has(stn[i])) count++;
+  }
+
+  return count;
+}
+
+let jewels = "abBaaC";
+let stones = "aAAbbCcbb";
 
 console.log(JewelsAndStones(jewels, stones));
 console.log(JewelsAndStonesOptimized(jewels, stones));
+console.log(JewelsAndStonesOptimized2(jewels, stones));
