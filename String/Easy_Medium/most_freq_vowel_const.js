@@ -29,3 +29,4 @@ var maxFreqSum = function(s) {
 let str = "successes";
 
 console.log(maxFreqSum(str));
+
