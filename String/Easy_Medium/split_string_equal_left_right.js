@@ -16,7 +16,6 @@ function splitLeftRight(str) {
       cR = 0;
     }
   }
-
   return count;
 }
 
@@ -36,7 +35,6 @@ function splitLeftRightOptimized(str) {
 
 let str1 = "LLLRRRLRRL";
 let str2 = "LRLLRRLRLR";
-
 console.log(splitLeftRight(str1));
 console.log(splitLeftRight(str2));
 console.log("Optimized :", splitLeftRightOptimized(str1));

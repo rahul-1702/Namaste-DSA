@@ -32,5 +32,3 @@ let str2 = "successes";
 
 console.log(maxFreqSum(str1));
 console.log(maxFreqSum(str2));
-
-// Done

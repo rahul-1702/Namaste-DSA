@@ -1,5 +1,3 @@
-// Jewels and Stones
-
 function JewelsAndStones(jew, stn) {
   let count = 0;
   for (let i = 0; i < stn.length; i++) {
@@ -13,7 +11,6 @@ function JewelsAndStones(jew, stn) {
 
   return count;
 }
-
 function JewelsAndStonesOptimized(jew, stn) {
   let count = 0;
   for (let i = 0; i < stn.length; i++) {
@@ -22,7 +19,6 @@ function JewelsAndStonesOptimized(jew, stn) {
 
   return count;
 }
-
 function JewelsAndStonesOptimized2(jew, stn) {
   let count = 0;
   let jSet = new Set();
@@ -36,10 +32,8 @@ function JewelsAndStonesOptimized2(jew, stn) {
 
   return count;
 }
-
 let jewels = "abBaaC";
 let stones = "aAAbbCcbb";
-
 console.log(JewelsAndStones(jewels, stones));
 console.log(JewelsAndStonesOptimized(jewels, stones));
 console.log(JewelsAndStonesOptimized2(jewels, stones));
