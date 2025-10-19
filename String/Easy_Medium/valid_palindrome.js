@@ -1,5 +1,23 @@
 function isPalindrome(s) {
   s = s.toLowerCase();
+  let filteredString = "";
+  let rev = "";
+  for (let i = 0; i < s.length; i++) {
+    if (
+      (s[i].charCodeAt() >= "a".charCodeAt() &&
+        s[i].charCodeAt() <= "z".charCodeAt()) ||
+      (s[i].charCodeAt() >= "0".charCodeAt() &&
+        s[i].charCodeAt() <= "9".charCodeAt())
+    ) {
+      filteredString = filteredString + s[i];
+      rev = s[i] + rev;
+    }
+  }
+  return filteredString === rev;
+}
+
+function isPalindromeOptimized(s) {
+  s = s.toLowerCase();
   let i = 0;
   let j = s.length - 1;
   while (i < j) {
@@ -22,3 +40,6 @@ let str2 = "kulkluk";
 
 console.log(isPalindrome(str1));
 console.log(isPalindrome(str2));
+
+console.log("Optimized :", isPalindrome(str1));
+console.log("Optimized :", isPalindrome(str2));
