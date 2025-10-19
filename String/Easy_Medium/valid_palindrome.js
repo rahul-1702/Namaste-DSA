@@ -15,7 +15,6 @@ function isPalindrome(s) {
   }
   return filteredString === rev;
 }
-
 function isPalindromeOptimized(s) {
   s = s.toLowerCase();
   let i = 0;
@@ -34,12 +33,9 @@ function isPalindromeOptimized(s) {
   }
   return true;
 }
-
 let str1 = "apple";
 let str2 = "kulkluk";
-
 console.log(isPalindrome(str1));
 console.log(isPalindrome(str2));
-
 console.log("Optimized :", isPalindrome(str1));
 console.log("Optimized :", isPalindrome(str2));
