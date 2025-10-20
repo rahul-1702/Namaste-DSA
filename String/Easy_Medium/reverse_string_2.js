@@ -36,7 +36,10 @@ function reverseString2(str, k) {
   return st;
 }
 
-let str = "Rahul";
-let k = 2;
+let str1 = "Rahul";
+let str2 = "Riya";
+let k1 = 2;
+let k2 = 3;
 
-console.log(reverseString2(str, k));
+console.log(reverseString(str1, k1));
+console.log(reverseString(str2, k2));
