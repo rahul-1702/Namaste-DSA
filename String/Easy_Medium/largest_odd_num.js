@@ -1,21 +1,17 @@
 function largestOddNumber(num) {
-  let max = 0;
-  for (let i = 0; i < num.length; i++) {
-    let str = num[i];
-    if (+str % 2 === 1) {
-      max = +str;
+  let i = num.length;
+  while (num !== "") {
+    let bit = num.slice(num.length - 1, num.length);
+    if (+bit % 2 === 1) {
+      return num.slice(0, i);
     }
-    for (let j = i; j < num.length; j++) {
-      str = str + num[j];
-      if (+str > max && +str % 2 === 1) {
-        max = +str;
-      }
-    }
+    i--;
+    num = num.slice(0, num.length - 1);
   }
 
-  return max;
+  return "";
 }
 
-let num = "34567";
+let num = "42412";
 
 console.log(largestOddNumber(num));
