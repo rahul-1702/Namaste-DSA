@@ -10,6 +10,8 @@ function largestOddNumber(num) {
   return "";
 }
 
-let num = "435102";
+let num1 = "435102";
+let num2 = "705";
 
-console.log(largestOddNumber(num));
+console.log(largestOddNumber(num1));
+console.log(largestOddNumber(num2));
