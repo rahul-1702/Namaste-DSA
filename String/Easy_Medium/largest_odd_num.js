@@ -11,7 +11,7 @@ function largestOddNumber(num) {
 }
 
 let num1 = "435102";
-let num2 = "705";
+let num2 = "70512";
 
 console.log(largestOddNumber(num1));
 console.log(largestOddNumber(num2));
