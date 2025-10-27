@@ -13,8 +13,6 @@ function isIsomorphic(s, t) {
 
   return true;
 }
-
 let s = "egg";
 let t = "add";
-
 console.log(isIsomorphic(s, t));
