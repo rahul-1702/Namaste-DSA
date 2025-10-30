@@ -1,1 +1,3 @@
-// CRUD for stack and queue
+// CRUD for stack
+
+// CRUD for queue
