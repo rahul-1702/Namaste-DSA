@@ -2,11 +2,9 @@ var MyStack = function() {
   this.q1 = [];
   this.q2 = [];
 };
-
 MyStack.prototype.push = function(x) {
   this.q1.push(x);
 };
-
 MyStack.prototype.pop = function() {
   let n = this.q1.length;
   for (let i = 0; i < n - 1; i++) {
@@ -18,7 +16,6 @@ MyStack.prototype.pop = function() {
   this.q2 = temp;
   return ans;
 };
-
 MyStack.prototype.top = function() {
   let n = this.q1.length;
   for (let i = 0; i < n - 1; i++) {
@@ -31,7 +28,6 @@ MyStack.prototype.top = function() {
   this.q2 = temp;
   return front;
 };
-
 MyStack.prototype.empty = function() {
   return this.q1.length === 0;
 };
@@ -40,7 +36,6 @@ MyStack.prototype.empty = function() {
 const stack = new MyStack();
 
 // Push elements
-stack.push(10);
 stack.push(20);
 stack.push(30);
 
@@ -48,5 +43,4 @@ console.log(stack.top());   // 👉 30  (top element)
 console.log(stack.pop());   // 👉 30  (removes top)
 console.log(stack.top());   // 👉 20
 console.log(stack.pop());   // 👉 20
-console.log(stack.pop());   // 👉 10
 console.log(stack.empty()); // 👉 true
