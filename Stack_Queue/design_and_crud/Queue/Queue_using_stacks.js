@@ -25,3 +25,18 @@ MyQueue.prototype.peek = function() {
 MyQueue.prototype.empty = function() {
     return this.s1.length === 0 && this.s2.length === 0;
 };
+
+const q = new MyQueue();
+
+q.push(10);
+q.push(20);
+q.push(30);
+
+console.log(q.peek()); // 👉 10 (front element)
+console.log(q.pop());  // 👉 10
+console.log(q.peek()); // 👉 20
+q.push(40);
+console.log(q.pop());  // 👉 20
+console.log(q.pop());  // 👉 30
+console.log(q.pop());  // 👉 40
+console.log(q.empty()); // 👉 true

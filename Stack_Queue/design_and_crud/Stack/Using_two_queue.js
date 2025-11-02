@@ -35,3 +35,18 @@ MyStack.prototype.top = function() {
 MyStack.prototype.empty = function() {
   return this.q1.length === 0;
 };
+
+// Create a new stack
+const stack = new MyStack();
+
+// Push elements
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack.top());   // 👉 30  (top element)
+console.log(stack.pop());   // 👉 30  (removes top)
+console.log(stack.top());   // 👉 20
+console.log(stack.pop());   // 👉 20
+console.log(stack.pop());   // 👉 10
+console.log(stack.empty()); // 👉 true
