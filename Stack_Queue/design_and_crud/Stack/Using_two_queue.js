@@ -44,3 +44,4 @@ console.log(stack.pop());   // 👉 30  (removes top)
 console.log(stack.top());   // 👉 20
 console.log(stack.pop());   // 👉 20
 console.log(stack.empty()); // 👉 true
+

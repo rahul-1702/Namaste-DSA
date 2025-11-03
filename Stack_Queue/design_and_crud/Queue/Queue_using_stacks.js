@@ -36,3 +36,4 @@ console.log(q.pop());  // 👉 10
 console.log(q.peek()); // 👉 30
 console.log(q.pop());  // 👉 30
 console.log(q.empty()); // 👉 true
+
