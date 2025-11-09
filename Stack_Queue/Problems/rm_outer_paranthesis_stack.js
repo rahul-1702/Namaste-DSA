@@ -1,3 +1,4 @@
+
 var removeOuterParentheses = function(s) {
     let stack = [];
     let ans = "";
