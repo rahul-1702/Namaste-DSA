@@ -24,6 +24,8 @@ MinStack.prototype.getMin = function() {
     return this.s[this.s.length-1][1];
 };
 
+// Test cases ===
+
 let minStack = new MinStack();
 
 console.log("Push 5");

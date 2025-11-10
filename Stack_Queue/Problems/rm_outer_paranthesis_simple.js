@@ -14,6 +14,8 @@ var removeOuterParentheses = function(s) {
     return ans;
 };
 
+// Test cases ===
+
 console.log(removeOuterParentheses("(()())(())")); 
 // Output: "()()()"
 
