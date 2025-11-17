@@ -18,6 +18,8 @@ var dailyTemperatures = function(arr) {
     return ans;
 };
 
+// Test Cases =====
+
 // 1. LeetCode Example
 console.log("Test 1:", dailyTemperatures([73,74,75,71,69,72,76,73]));
 // Expected: [1,1,1,2,1,1,0,0]
