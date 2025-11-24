@@ -1,4 +1,3 @@
-// Function under test
 var guessNumber = function (n) {
   let l = 1;
   let r = n;
@@ -11,7 +10,7 @@ var guessNumber = function (n) {
       r = m - 1;
     } else {
       l = m + 1;
-    }
+    } 
   }
 };
 
