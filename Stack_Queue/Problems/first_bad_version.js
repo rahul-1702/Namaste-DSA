@@ -14,3 +14,4 @@ var solution = function(isBadVersion) {
     };
 };
 
+// Test Cases =====
