@@ -15,3 +15,17 @@ var solution = function(isBadVersion) {
 };
 
 // Test Cases =====
+
+// function isBadVersion(version) {
+//     return version >= 4;
+// }
+
+// const findFirstBad = solution(isBadVersion);
+// console.log(findFirstBad(5));  // Output → 4
+
+function isBadVersion(version) {
+    return version >= 1;
+}
+
+const findFirstBad = solution(isBadVersion);
+console.log(findFirstBad(5));  // Output → 1
