@@ -29,3 +29,4 @@ function isBadVersion(version) {
 
 const findFirstBad = solution(isBadVersion);
 console.log(findFirstBad(5));  // Output → 1
+
