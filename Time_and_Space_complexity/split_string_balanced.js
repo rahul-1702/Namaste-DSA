@@ -14,7 +14,6 @@ function BalancedString(str) {
   return count;
 }
 
-
 let str = "LLLRLRRR";
 
 console.log(BalancedString(str));
