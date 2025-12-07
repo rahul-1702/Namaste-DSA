@@ -1,4 +1,10 @@
-function isAnagram(str, rev) {
+// Valid Anagram
+
+function ValidAnagram(str, rev) {
+  return str.split("").sort().join("") === rev.split("").sort().join("");
+}
+
+function ValidAnagramOptimized(str, rev) {
   if (str.length !== rev.length) return false;
 
   let sMap = {};
@@ -19,7 +25,8 @@ function isAnagram(str, rev) {
   return true;
 }
 
-let s = "anagram";
-let t = "nagaram";
+let str = "anagram";
+let rev = "raganam";
 
-console.log(isAnagram(s, t));
+console.log(ValidAnagram(str, rev));
+console.log(ValidAnagramOptimized(str, rev));
