@@ -1,3 +1,4 @@
+
 var findClosestElements = function (arr, k, x) {
   let l = 0;
   let r = arr.length - k;
