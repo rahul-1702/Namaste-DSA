@@ -19,6 +19,7 @@ var findClosestElements = function (arr, k, x) {
 
 // TEST CASES =====
 
+
 // Standard cases :
 console.log(findClosestElements([1, 2, 3, 4, 5], 4, 3));
 // Expected [1,2,3,4]

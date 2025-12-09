@@ -32,6 +32,7 @@ var searchRange = function (arr, target) {
 
 // TEST CASES =====
 
+
 // Standard cases :
 console.log(searchRange([5, 7, 7, 8, 8, 10], 8));
 // Expected [3,4]

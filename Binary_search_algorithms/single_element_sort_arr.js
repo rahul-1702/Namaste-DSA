@@ -21,6 +21,7 @@ var singleNonDuplicate = function (arr) {
 
 // TEST CASES =====
 
+
 // Standard cases :
 console.log(singleNonDuplicate([1, 1, 2, 3, 3, 4, 4]));
 // Expected 2
