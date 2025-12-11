@@ -73,3 +73,4 @@ console.log(searchRange([1, 2, 3, 4, 5], 1));
 // Expected [0,0]
 console.log(searchRange([1, 2, 3, 4, 5], 5));
 // Expected [4,4]
+

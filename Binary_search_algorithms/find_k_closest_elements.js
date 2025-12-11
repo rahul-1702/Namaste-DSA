@@ -54,3 +54,4 @@ console.log(findClosestElements([1, 100, 200, 300, 400], 2, 150));
 // Expected [100,200]
 console.log(findClosestElements([1, 100, 200, 300, 400], 3, 350));
 // Expected [200,300,400]
+
