@@ -12,7 +12,10 @@ var peakIndexInMountainArray = function (arr) {
   return r;
 };
 
+
 // TEST CASES =====
+
+
 
 // Basic mountain arrays :
 console.log(peakIndexInMountainArray([0, 1, 0]));
@@ -37,3 +40,4 @@ console.log(peakIndexInMountainArray([1, 2, 3, 2]));
 // Minimum valid mountain (length = 3) :
 console.log(peakIndexInMountainArray([1, 3, 2]));
 // Expected 1
+
