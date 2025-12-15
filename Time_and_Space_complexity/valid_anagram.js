@@ -30,3 +30,4 @@ let rev = "raganam";
 
 console.log(ValidAnagram(str, rev));
 console.log(ValidAnagramOptimized(str, rev));
+
